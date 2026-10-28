@@ -1,0 +1,64 @@
+{
+  "name": "dsh-zhijiang-connector",
+  "version": "0.1.0",
+  "description": "Balance, spend runway and top-up entry for a New API relay (Kaiwu Cloud) in the DSH web GUI sidebar",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "locale/",
+    "cordis.patch.yml",
+    "icon.svg",
+    "icon-180.png",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "new-api",
+    "relay",
+    "balance"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/dsh-zhijiang-connector.git"
+  },
+  "homepage": "https://github.com/OWNER/dsh-zhijiang-connector#readme",
+  "bugs": {
+    "url": "https://github.com/OWNER/dsh-zhijiang-connector/issues"
+  },
+  "author": "OWNER (https://github.com/OWNER)",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/config.js && node --check lib/normalize.js && node --check lib/upstream.js && node --check lib/cache.js && node --check lib/service.js && node --check lib/routes.js && node --check lib/client.js",
+    "test": "node test/normalize.test.mjs && node test/service.test.mjs && node test/smoke-routes.mjs && node test/plugin-load.mjs && node test/settings-form.mjs",
+    "test:live": "node test/live.mjs",
+    "verify:account": "node scripts/verify-account-live.mjs"
+  },
+  "license": "MIT"
+}

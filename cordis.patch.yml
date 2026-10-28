@@ -1,0 +1,6 @@
+# Mount the connector's host half when this package is registered as a
+# DeepSeek Harness profile bundle. The browser half is discovered through the
+# package's `dsh.client` field and its `./client` export.
+- insert:
+    - id: zhijiang-connector
+      name: "dsh-zhijiang-connector"
