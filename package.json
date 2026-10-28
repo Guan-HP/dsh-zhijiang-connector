@@ -32,13 +32,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/dsh-zhijiang-connector.git"
+    "url": "git+https://github.com/Guan-HP/dsh-zhijiang-connector.git"
   },
-  "homepage": "https://github.com/OWNER/dsh-zhijiang-connector#readme",
+  "homepage": "https://github.com/Guan-HP/dsh-zhijiang-connector#readme",
   "bugs": {
-    "url": "https://github.com/OWNER/dsh-zhijiang-connector/issues"
+    "url": "https://github.com/Guan-HP/dsh-zhijiang-connector/issues"
   },
-  "author": "OWNER (https://github.com/OWNER)",
+  "author": "Guan-HP (https://github.com/Guan-HP)",
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
